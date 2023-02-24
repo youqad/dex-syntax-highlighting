@@ -1,0 +1,26 @@
+{
+  "name": "dex-syntax-highlighting",
+  "displayName": "Dex Syntax Highlighting",
+  "description": "Syntax highlighting support for Dex in Visual Studio Code.",
+  "version": "0.0.1",
+  "publisher": "youqad",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "dex",
+      "aliases": ["Dex", "dex"],
+      "extensions": [".dx"],
+      "configuration": "./dex-configuration.json"
+    }],
+    "grammars": [{
+      "language": "dex",
+      "scopeName": "source.dex",
+      "path": "./syntaxes/dex.tmLanguage.json"
+    }]
+  }
+}

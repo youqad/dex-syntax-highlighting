@@ -1,0 +1,27 @@
+// See: https://github.com/JustusAdam/language-haskell/blob/master/haskell-configuration.json
+{
+    "comments": {
+        "lineComment": "--",
+        "blockComment": ["'#", "\n\n"]
+    },
+    "brackets": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"]
+    ],
+    "autoClosingPairs": [
+        { "open": "{", "close": "}" },
+        { "open": "[", "close": "]" },
+        { "open": "(", "close": ")" },
+        { "open": "\"", "close": "\"", "notIn": ["string"] },
+        { "open": "`", "close": "`", "notIn": ["string", "comment"] }
+    ],
+    "surroundingPairs": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["'", "'"],
+        ["\"", "\""],
+        ["`", "`"]
+    ]
+}

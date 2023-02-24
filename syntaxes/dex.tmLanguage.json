@@ -1,0 +1,65 @@
+{
+  "name": "Dex",
+  "scopeName": "source.dex",
+  "fileTypes": [
+    "dx"
+  ],
+  "patterns": [
+    {
+      "name": "comment.line.dex",
+      "match": "--([^o].*$|$)"
+    },
+    {
+      "name": "comment.line.dex",
+      "match": "^> .*"
+    },
+    {
+      "name": "comment.block.dex",
+      "begin": "^\\'",
+      "end": "^\\n$",
+      "captures": {
+        "0": {
+          "name": "comment.block.dex"
+        }
+      }
+    },
+    {
+      "name": "meta.definition.dex",
+      "match": "\\w+:"
+    },
+    {
+      "name": "meta.preprocessor.dex",
+      "match": "^:\\w*"
+    },
+    {
+      "name": "keyword.control.dex",
+      "match": "\\bdef\\b|\\bfor\\b|\\brof\\b|\\bcase\\b|\\bdata\\b|\\bwhere\\b|\\bof\\b|\\bif\\b|\\bthen\\b|\\belse\\b|\\binterface\\b|\\binstance\\b|\\bgiven\\b|\\bdo\\b|\\bview\\b|\\bimport\\b|\\bforeign\\b"
+    },
+    {
+      "name": "variable.other.dex",
+      "match": "--o|[-.,!$^&*:~+/=<>|?\\\\]"
+    },
+    {
+      "name": "support.type.dex",
+      "match": "\\b[A-Z][[:alnum:]]*\\b"
+    },
+    {
+      "name": "keyword.other.dex",
+      "match": "^@[[:alnum:]]*\\b"
+    },
+    {
+      "name": "constant.numeric.dex",
+      "match": "\\b[0-9]+\\b"
+    },
+    {
+      "name": "string.quoted.double.dex",
+      "begin": "\\\"",
+      "end": "\\\"",
+      "captures": {
+        "0": {
+          "name": "string.quoted.double.dex"
+        }
+      }
+    }
+  ]
+}
