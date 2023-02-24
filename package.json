@@ -22,6 +22,7 @@
   "categories": [
     "Programming Languages"
   ],
+  "main": "./out/src/extension",
   "contributes": {
     "languages": [{
       "id": "dex",
