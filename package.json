@@ -8,13 +8,9 @@
     "vscode": "^1.75.0"
   },
   "keywords": [
-    "language",
-    "dex",
-    "highlight",
-    "syntax"
+    "dex"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/youqad/dex-syntax-highlighting/blob/main/README.md",
   "repository": {
     "type": "github",
     "url": "https://github.com/youqad/dex-syntax-highlighting"
@@ -22,7 +18,6 @@
   "categories": [
     "Programming Languages"
   ],
-  "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {
@@ -46,12 +41,13 @@
     ]
   },
   "scripts": {
-    "prepare": "js-yaml syntaxes/dex.tmLanguage.yaml > syntaxes/dex.tmLanguage.json",
+    "prepare": "js-yaml syntaxes/dex.YAML-tmLanguage > syntaxes/dex.tmLanguage.json",
     "clean": "rm -f syntaxes/dex.tmLanguage.json",
     "patch": "npm run prepare && vsce publish patch && npm run clean"
   },
   "dependencies": {
-    "@vscode/vsce": "^2.17.0",
-    "js-yaml": "^4.1.0"
+    "@vscode/vsce": "^2.18.0",
+    "js-yaml": "^4.1.0",
+    "vscode-tmgrammar-test": "^0.1.1"
   }
 }
