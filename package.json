@@ -13,27 +13,45 @@
     "highlight",
     "syntax"
   ],
-  "license": "BSD-3-Clause",
-  "homepage": "https://github.com/youqad/dex-syntax-highlighting",
+  "license": "MIT",
+  "homepage": "https://github.com/youqad/dex-syntax-highlighting/blob/main/README.md",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/youqad/dex-syntax-highlighting.git"
+    "type": "github",
+    "url": "https://github.com/youqad/dex-syntax-highlighting"
   },
   "categories": [
     "Programming Languages"
   ],
-  "main": "./out/src/extension",
+  "main": "./out/extension.js",
   "contributes": {
-    "languages": [{
-      "id": "dex",
-      "aliases": ["Dex", "dex"],
-      "extensions": [".dx"],
-      "configuration": "./dex-configuration.json"
-    }],
-    "grammars": [{
-      "language": "dex",
-      "scopeName": "source.dex",
-      "path": "./syntaxes/dex.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "dex",
+        "aliases": [
+          "Dex",
+          "dex"
+        ],
+        "extensions": [
+          ".dx"
+        ],
+        "configuration": "./dex-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dex",
+        "scopeName": "source.dex",
+        "path": "./syntaxes/dex.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "prepare": "js-yaml syntaxes/dex.tmLanguage.yaml > syntaxes/dex.tmLanguage.json",
+    "clean": "rm -f syntaxes/dex.tmLanguage.json",
+    "patch": "npm run prepare && vsce publish patch && npm run clean"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^2.17.0",
+    "js-yaml": "^4.1.0"
   }
 }
