@@ -2,7 +2,7 @@
   "name": "dex-syntax-highlighting",
   "displayName": "Dex Syntax Highlighting",
   "description": "Syntax highlighting support for Dex in Visual Studio Code.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "youqad",
   "engines": {
     "vscode": "^1.75.0"
