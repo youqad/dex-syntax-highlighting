@@ -7,6 +7,18 @@
   "engines": {
     "vscode": "^1.75.0"
   },
+  "keywords": [
+    "language",
+    "dex",
+    "highlight",
+    "syntax"
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/youqad/dex-syntax-highlighting",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/youqad/dex-syntax-highlighting.git"
+  },
   "categories": [
     "Programming Languages"
   ],
